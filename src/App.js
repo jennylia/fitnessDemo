@@ -13,6 +13,9 @@ import Workout2 from "./pages/Workout2";
 import Workout3 from "./pages/Workout3";
 import Workout4 from "./pages/Workout4";
 
+import OutlinedCard from "./components/OutlinedCard";
+
+
 export default function App() {
   return (
     <Router>
@@ -23,21 +26,10 @@ export default function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
+              <Link to="/WeeklySummary">This Week Report</Link>
             </li>
           </ul>
         </nav>
-
-        <content>
-          <Link to="/Workout1">Workout1</Link>
-          <Link to="/Workout2">Workout1</Link>
-          <Link to="/Workout3">Workout1</Link>
-          <Link to="/Workout4">Workout1</Link>
-
-        </content>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
