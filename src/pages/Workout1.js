@@ -1,5 +1,7 @@
+import ContactForm from "../components/ContactForm";
 const Workout1 = () => {
-    return <h2>Workout1</h2>;      
+
+  return <ContactForm></ContactForm>;      
 }
 
 export default Workout1

@@ -1,5 +1,6 @@
+import Form from "../components/Form"
 const Workout2 = () => {
-    return <h2>Workout2</h2>;      
+      <Form></Form>
 }
 
 export default Workout2
