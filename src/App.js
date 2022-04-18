@@ -1,10 +1,17 @@
 import React from "react";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
+  Routes,
   Link
 } from "react-router-dom";
+
+
+import Home from "./pages/Home";
+import Workout1 from "./pages/Workout1";
+import Workout2 from "./pages/Workout2";
+import Workout3 from "./pages/Workout3";
+import Workout4 from "./pages/Workout4";
 
 export default function App() {
   return (
@@ -24,32 +31,27 @@ export default function App() {
           </ul>
         </nav>
 
+        <content>
+          <Link to="/Workout1">Workout1</Link>
+          <Link to="/Workout2">Workout1</Link>
+          <Link to="/Workout3">Workout1</Link>
+          <Link to="/Workout4">Workout1</Link>
+
+        </content>
+
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/Workout1" element={<Workout1/>}/>
+          <Route exact path="/Workout2" element={<Workout2/>}/>
+          <Route exact path="/Workout3" element={<Workout3/>}/>
+          <Route exact path="/Workout4" element={<Workout4/>}/>
+          <Route exact path="/WeeklySummary" element={<Home/>}/>
+
+        </Routes>
       </div>
     </Router>
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
