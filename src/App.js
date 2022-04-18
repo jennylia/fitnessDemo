@@ -13,24 +13,13 @@ import Workout2 from "./pages/Workout2";
 import Workout3 from "./pages/Workout3";
 import Workout4 from "./pages/Workout4";
 
-import OutlinedCard from "./components/OutlinedCard";
-
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
 
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/WeeklySummary">This Week Report</Link>
-            </li>
-          </ul>
-        </nav>
-
+        <ResponsiveAppBar></ResponsiveAppBar>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
